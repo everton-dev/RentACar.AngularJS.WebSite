@@ -1,0 +1,81 @@
+﻿<!--
+MIT License
+
+Copyright (c) 2017 Everton José Beendicto
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
+<div class="card" ng-show="!showCars">
+    <div class="card-content">
+        <div class="row">
+            <div class="input-field col s4">
+                <select id="setLocations" 
+                        ng-options="option.id as option.name for option in locations track by option.id"
+                        ng-model="filterSeach.location" />
+                <label for="setLocations">PICK-UP LOCATION</label>
+            </div>
+            <div class="input-field col s3">
+                <input id="txtIniDate" type="text" class="datepicker" ng-model="filterSeach.Inidate" input-date-picker>
+                <label for="txtIniDate">PICK-UP TIME</label>
+            </div>
+            <div class="input-field col s3">
+                <input id="txtFinDate" type="text" class="datepicker" ng-model="filterSeach.FinDate" input-date-picker>
+                <label for="txtFinDate">DROP-OFF TIME</label>
+            </div>
+            <div class="input-field col s2">
+                <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="Find()">
+                    Find
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" ng-show="showCars">
+    <div class="row">
+        <button class="btn waves-effect waves-light red" type="submit" name="action" ng-click="ReFind()">
+            Back
+        </button>
+    </div>
+    <div class="col s4" ng-repeat="car in cars">
+        <div class="card sticky-action">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" ng-src="{{car.src}}">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{car.brand}}<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-action">
+                <a href="#">Pay Now</a>
+                <a href="#">Pay Later</a>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{car.brand}} - Details<i class="material-icons right">close</i></span>
+                <p>Pay Now ${{car.nowValue}}</p>
+                <p>Pay Later ${{car.value}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('select').material_select();
+});
+</script>

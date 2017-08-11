@@ -1,0 +1,98 @@
+﻿<!--
+MIT License
+
+Copyright (c) 2017 Everton José Beendicto
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html ng-app="rentApp">
+<head>
+    <base href="/">
+    <title>{{title}}</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rent a Car AngularJS - AngularJS Exemple." />
+    <meta name="keywords" content="AngularJS, GitHub, Everton, javascript, JS" />
+    <meta name="Googlebot" content="code">
+    <meta name="robots" content="all">
+    <meta name="publisher" content="www.intervalor.automation.com.br">
+    <meta name="revisit-after" content="1 DAYS">
+
+    <!--MATERIALIZE CSS-->
+    <link rel="stylesheet" type="text/css" href="Content/Materialize/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--SITE CSS-->
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+
+    <!--MODERNIZR CORE-->
+    <script type="text/javascript" src="Scripts/modernizr-2.8.3.js"></script>
+
+    <!--JQUERY CORE-->
+    <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js"></script>
+
+    <!--MATERIALIZE CORE-->
+    <script type="text/javascript" src="Scripts/Materialize/materialize.min.js"></script>
+
+    <!--RESPOND CORE-->
+    <script type="text/javascript" src="Scripts/respond.min.js"></script>
+
+    <!--ANGULAR CORE-->
+    <script type="text/javascript" src="Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-sanitize.min.js"></script>
+
+    <!--ANGULAR APP-->
+    <script type="text/javascript" src="AngularInit/App.js"></script>
+
+    <!--ANGULAR ROUTE-->
+    <script type="text/javascript" src="AngularInit/Routes/AppRoutes.js"></script>
+
+    <!--ANGULAR CONTROLLERS-->
+    <script type="text/javascript" src="AngularInit/Controllers/MasterController.js"></script>
+    <script type="text/javascript" src="AngularInit/Controllers/HomeController.js"></script>
+    <script type="text/javascript" src="AngularInit/Controllers/AboutUsController.js"></script>
+    <script type="text/javascript" src="AngularInit/Controllers/RentController.js"></script>
+    <script type="text/javascript" src="AngularInit/Controllers/ContactController.js"></script>
+    <script type="text/javascript" src="AngularInit/Controllers/LoginController.js"></script>
+    <script type="text/javascript" src="AngularInit/Controllers/HttpTestController.js"></script>
+
+    <!--ANGULAR FACTORIES-->
+    <script type="text/javascript" src="AngularInit/Factories/AuthenticationFactory.js"></script>
+
+    <!--DIRECTIVES FACTORIES-->
+    <script type="text/javascript" src="AngularInit/Directives/Pages.js"></script>
+    <script type="text/javascript" src="AngularInit/Directives/MaterializeComponents.js"></script>
+
+    <!--SERVICES FACTORIES-->
+    <script type="text/javascript" src="AngularInit/Services/ServiceAngular.js"></script>
+
+    <!--SITE JS-->
+    <script type="text/javascript" src="Scripts/Site/Init.js"></script>
+
+</head>
+<body>
+    <ng-include src="'Views/_Master.html'" ng-controller="MasterController" />
+</body>
+</html>
